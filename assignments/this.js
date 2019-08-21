@@ -41,7 +41,7 @@ function Owncar(car){
   this.car = car;
 }
 
-let Mycar = new Owncar('I own a 2016 Toyota Camry');
+let Mycar = new Owncar('I want a 2019 lexus RX350');
 
 console.log(Mycar.car);
 
