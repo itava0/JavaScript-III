@@ -20,14 +20,12 @@ function GameObject(element) {
   this.name = element.name;
   this.dimensions = {
     length: element.dimensions.length,
-    width: element.dimensions.length,
+    width: element.dimensions.width,
     height: element.dimensions.height
   }
 }
 
-GameObject.prototype.destroy = function () {
-  `${this.name} was removed from the game`;
-};
+GameObject.prototype.destroy = function () { return `${this.name} was removed from the game.`}
 /*
   === CharacterStats ===
   * healthPoints
@@ -52,7 +50,7 @@ CharacterStats.prototype.takeDamage = function () { return `${this.name} took da
   * should inherit takeDamage() from CharacterStats
 */
 function Humanoid(element) {
-  CharacterStats.call(this, element);
+  CharacterStats.call(this, element)
   this.team = element.team;
   this.weapons = element.weapons;
   this.language = element.language;
